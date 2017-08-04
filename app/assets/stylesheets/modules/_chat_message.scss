@@ -1,0 +1,29 @@
+.main{
+  height:100%;
+  width: calc(100vw - 300px);
+  float:left;
+  position: relative;
+  .messages{
+    height: calc(100vh - 230px);
+    clear: both;
+    overflow: scroll;
+    padding-bottom: 40px;
+    .message{
+      padding:46px 40px 0px 40px;
+      font-size: 16px;
+      color: #434A54;
+      .message__username{
+        font-weight: bold;
+      }
+      .message__date{
+          font-size: 12px;
+          color: #999999;
+      }
+      .message__text{
+        padding: 10px 0 0 0;
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+  }
+}

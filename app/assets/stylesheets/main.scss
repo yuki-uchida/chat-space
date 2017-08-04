@@ -1,0 +1,66 @@
+html,body {
+  height:100%;
+  width:100%;
+  background-color: white;
+  margin: 0 auto;
+  overflow: hidden;
+  @include clearfix();
+  font-family: "Hiragino Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial, sans-serif;
+}
+.side{
+  width:300px;
+  height:100%;
+  background-color: #2f3e51;
+  float:left;
+  .side__username{
+   box-sizing: border-box;
+   padding:20px;
+   background-color: #253141;
+   @include clearfix();
+   h5{
+    color:#FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    float:left;
+   }
+   .side__user__actions{
+     float:right;
+     .side__user__action{
+       display: inline-block;
+       margin: 15px 0 15px 3px;
+       line-height: 28px;
+       color: #fff;
+       font-size: 20px;
+     }
+   }
+  }
+  .side__groups{
+    height: calc(100% - 100px);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    list-style: none;
+    overflow: scroll;
+      .side__group{
+        height: calc(100% - 100px);
+        .side__group__link{
+          display: block;
+          padding: 20px 20px;
+          color: #fff;
+          .side__group__name{
+            display: inline-block;
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          .side__group__message{
+            font-size: 11px;
+            overflow: hidden;
+          }
+        }
+      }
+  }
+}
+
+

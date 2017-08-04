@@ -1,0 +1,24 @@
+.side
+  .side__username.clearfix
+    %h5
+      = current_user.name
+    .side__user__actions
+      %a.side__user__action{:href => "/groups/new"}
+        %i.fa.fa-pencil-square-o
+      %a.side__user__action{:href => "/users/#{current_user.id}/edit"}
+        %i.fa.fa-cog
+  %ul.side__groups
+    %li.side__group
+      - current_user.groups.each do |group|
+        %a
+          = link_to group_messages_path(group), class: :side__group__link do
+            %p.side__group__name
+              = group.group_name
+            %p.side__group__message
+              - if Message.find_by(group_id: group.id)
+                = Message.all.order("created_at DESC").find_by(group_id: group.id).body
+
+
+
+
+

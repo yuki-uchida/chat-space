@@ -1,0 +1,40 @@
+.main{
+  height:100%;
+  width: calc(100vw - 300px);
+  float:left;
+  position: relative;
+  .chat__header{
+    width:100%;
+    height:100px;
+    padding:0px 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    float:left;
+    .chat__header__left{
+      float:left;
+      .groupname{
+        margin-top: 20px;
+        font-size: 20px;
+        color: #333333;
+        line-height: 50px;
+      }
+      .menbers{
+        font-size: 12px;
+        color: #999999;
+        line-height: 20px;
+      }
+    }
+    .chat__header__right{
+      float:right;
+      .chat__header__edit--btn{
+        display: inline-block;
+        color: #38aef0;
+        border: 2px solid;
+        font-size: 14px;
+        line-height: 40px;
+        margin: 28px 0;
+        padding:0 20px;
+      }
+    }
+  }
+}

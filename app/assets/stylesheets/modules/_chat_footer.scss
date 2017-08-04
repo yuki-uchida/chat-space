@@ -1,0 +1,51 @@
+.main{
+  height:100%;
+  width: calc(100vw - 300px);
+  float:left;
+  position: relative;
+  .chat-footer{
+    background-color: #ddd;
+    padding: 20px 40px;
+    .new--message{
+      @include clearfix();
+      background-color: #ddd;
+      .new--message__text{
+        width: calc(100% - 115px);
+        float:left;
+        height:50px;
+        position: relative;
+        .new--message__textarea{
+          resize: none;
+          width:calc(100% - 15px);
+          height:20px;
+          font-size: 16px;
+          color: #434A54;
+          padding: 15px 10px;
+          line-height: 20px;
+          border:none;
+        }
+        .fa{
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            width: 40px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+      }
+       .new--message__submit{
+        float:left;
+        text-align: center;
+        background-color: #38AEF0;
+        width: 100px;
+        height: 50px;
+        color: #FFF;
+        margin-left:15px;
+        border:none;
+      }
+    }
+  }
+}

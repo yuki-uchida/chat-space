@@ -1,0 +1,8 @@
+.chat-footer
+  .new--message
+    = form_for [groups, messages] do |f|
+      .new--message__text
+        = f.text_area :body, placeholder: " type a message", class: "new--message__textarea", row: "1"
+        = f.file_field :image, class: "fa fa-image"
+
+      = f.submit "Send", class: "new--message__submit"

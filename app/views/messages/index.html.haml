@@ -1,0 +1,25 @@
+= render '/groups/side-group-bar'
+.main
+  .chat__header
+    .chat__header__left
+      %h2.groupname
+        = @group.group_name
+      %p.menbers
+        - @group.users.each do |user|
+          = user.name
+    .chat__header__right
+      %a.chat__header__edit--btn{:href => "/groups/#{@group.id}/edit"}
+        Edit
+  .messages
+    - @group.messages.each do |message|
+      .message
+        %span.message__username
+          = message.user.name
+        %span.message__date
+          = message.created_at
+        %p.message__text
+          = message.body
+        - if message.image.present?
+          %p.message__image
+            = image_tag message.image, :size => '100x100'
+  = render partial: '/messages/chat-footer', locals: { groups: @group, messages: @message }
